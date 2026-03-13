@@ -2,7 +2,7 @@ import argparse
 import torch
 import os
 from utils import VoxVietDataModule
-from ecapa_tdnn import LitSpeakerModel
+from models.ecapa_tdnn import LitSpeakerModel
 import pytorch_lightning as pl
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 

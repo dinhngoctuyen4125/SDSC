@@ -7,27 +7,14 @@ import pyroomacoustics as pra
 import scipy.signal as sps
 
 import glob
-import warnings
-
-from tqdm import tqdm
 
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
 import torchaudio
 import torchaudio.compliance.kaldi as kaldi
 from torch.utils.data import Dataset, DataLoader
-from torch.optim import Adam
 
 import pytorch_lightning as pl
-from pytorch_lightning.callbacks import (
-    ModelCheckpoint, 
-    LearningRateMonitor, 
-    EarlyStopping, 
-    Callback
-)
-
-from sklearn.metrics import roc_curve
 
 class HardAugmentor:
     def __init__(self, noise_dir=None, sr=16000):

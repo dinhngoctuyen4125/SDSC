@@ -13,9 +13,8 @@ parser.add_argument("--noise_dir", type=str, required=True)
 
 args = parser.parse_args()
 
-DATA_ROOT = os.path.join(args.data_root, "VoxVietnamese_dataset")
-NOISE_DIR = os.path.join(args.noise_dir, "musan")
-
+DATA_ROOT = args.data_root
+NOISE_DIR = args.noise_dir
 CHECKPOINT_DIR = "checkpoints"
 
 dm = VoxVietDataModule(

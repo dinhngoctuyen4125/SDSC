@@ -1,5 +1,3 @@
-echo "Downloading datasets..."
-
 read DATA_ROOT NOISE_DIR < <(python get_dataset.py)
 
 echo "DATA_ROOT: $DATA_ROOT"

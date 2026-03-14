@@ -1,8 +1,8 @@
 ## 1. Add and activate venv
 
 ```bash
-python -m venv venv
-venv\Scripts\activate
+conda create -n prod python=3.11.13
+conda activate prod
 ```
 
 ## 2. Install dependencies
